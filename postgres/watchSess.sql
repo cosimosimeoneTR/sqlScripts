@@ -1,1 +1,1 @@
-select to_char(now(),'Dy HH24:MI:SS') now,substr(application_name,1,25) application_name, to_char(backend_start,'Dy HH24:MI:SS'), state, regexp_replace(substr(query,1,120), E'[\\n\\r]+', ' ', 'g' )   query from pg_stat_activity where pid <> pg_backend_pid(); \watch 90
+select client_addr, to_char(now(),'Dy HH24:MI:SS') now,substr(application_name,1,25) application_name, to_char(backend_start,'Dy HH24:MI:SS') backend_start, state, regexp_replace(substr(query,1,120), E'[\\n\\r]+', ' ', 'g' )   query from pg_stat_activity where pid <> pg_backend_pid(); \watch 90
