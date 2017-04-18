@@ -11,3 +11,4 @@ SELECT table_name
        AND (relname ILIKE table_name)
  GROUP BY table_name
  ORDER BY table_name
+;
