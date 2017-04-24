@@ -13,9 +13,9 @@ SELECT
               , pg_total_relation_size(reltoastrelid) AS toast_bytes
           FROM pg_class c
           LEFT JOIN pg_namespace n ON n.oid = c.relnamespace
-          WHERE relkind = 'r'
+          --WHERE relkind = 'r'
   ) a
 ) a
-where table_schema not in ('information_schema','pg_catalog')
+where table_schema not in ('information_schema','pg_catalog','pg_toast')
 order by table_schema, table_name
 ;
