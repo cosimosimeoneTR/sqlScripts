@@ -12,7 +12,7 @@
 
 \set VERBOSITY verbose
 
-\pset pager less
+\pset pager always
 
 
 ------- PROMPT1
