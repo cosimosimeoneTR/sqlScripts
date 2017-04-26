@@ -1,0 +1,38 @@
+\set QUIET 1
+-- \pset null '[null]'
+\pset null '[nUlL]'
+
+\set COMP_KEYWORD_CASE upper
+
+\timing
+
+\set HISTSIZE 999999999999
+
+-- \x auto
+
+\set VERBOSITY verbose
+
+\pset pager less
+
+
+------- PROMPT1
+-- \set PROMPT1 '%M:%[%033[1;31m%]%>%[%033[0m%] %n@%/%R%#%x '
+-- \set PROMPT1 '(%n@%M:%>) %[%033[00;33m%]%`date +%H:%M:%S`%[%033[00m%] [%[%033[01;31m%]%/%[%[%033[00m%]] > '
+-- \set PROMPT1 '%`date +%H:%M:%S` %n@%/%R%#%x '
+-- \set PROMPT1 '%`date +%H:%M:%S` %n@%`hostname`:%>/%/%#%x '
+-- \set PROMPT1 '%[%033[1;32m%]%`date +%H:%M:%S`%[%033[0m%] %n@%`hostname`:%>/%/%x%R%# '
+-- \set PROMPT1 '%[%033[1;32m%]%`date +%H:%M:%S`%[%033[0m%] %n@%`hostname`/%/%x%R%# '
+--
+\set PROMPT1 '\n%[%033[1;32m%]%`date +%H:%M:%S`%[%033[0m%] %n@%`hostname`/%/%x\n%R%# '
+
+
+
+------- PROMPT2
+-- \set PROMPT2 '%M %n@%/%R %# '
+-- \set PROMPT2 '%[%033[0;32m%]%`date +%H:%M:%S`%[%033[0m%] %n@%`hostname`:%>/%/%x%R%# '
+-- \set PROMPT2 '         %n@%`hostname`:%>/%/%x%R%# '
+-- \set PROMPT2 '         %n@%`hostname`/%/%x%R%# '
+--
+\set PROMPT2 '%R%# '
+
+\set QUIET 0
