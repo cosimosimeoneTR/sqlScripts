@@ -1,2 +1,4 @@
 termcapinfo xterm ks@:ke@
 termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+defscrollback 999999999999
+termcapinfo xterm ti@:te@
