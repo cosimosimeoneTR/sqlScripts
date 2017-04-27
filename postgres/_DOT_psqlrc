@@ -36,5 +36,3 @@
 \set PROMPT2 '%R%# '
 
 \set QUIET 0
-
-begin;
