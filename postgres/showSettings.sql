@@ -1,0 +1,1 @@
+select name, setting, source, sourcefile, sourceline, extra_desc, context from pg_settings
