@@ -1,2 +1,2 @@
 \prompt 'pid to show? ' pid
-select pid, datname, usename, application_name, backend_start, client_addr, xact_start, state, query from pg_stat_activity  where pid = :pid;
+select pid, datname, usename, application_name, client_addr, to_char(backend_start,'HH24:MI:SS') backend_start, /*to_char(xact_start,'HH24:MI:SS') xact_start, */age(xact_start, backend_start) as age, state, query from pg_stat_activity  where pid = :pid;
