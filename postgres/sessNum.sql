@@ -5,15 +5,9 @@ SELECT
     usename,
     application_name,
     client_addr,
-    to_char(
-        backend_start,
-        'HH24:MI:SS'
-    ) backend_start,
+    to_char(backend_start,'HH24:MI:SS') backend_start,
     /*to_char(xact_start,'HH24:MI:SS') xact_start, */
-    age(
-        xact_start,
-        backend_start
-    ) AS age,
+    age(xact_start,backend_start) AS connected_since,
     state,
     query
 FROM
