@@ -1,3 +1,9 @@
 -- ALTER SYSTEM SET track_activity_query_size = 16384;
 \prompt 'pid to show? ' pid
-select state, query from pg_stat_activity where pid = :pid;
+SELECT
+    state,
+    query
+FROM
+    pg_stat_activity
+WHERE
+    pid =:pid;

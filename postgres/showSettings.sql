@@ -1,1 +1,10 @@
-select name, setting, source, sourcefile, sourceline, extra_desc, context from pg_settings
+SELECT
+    name,
+    setting,
+    SOURCE,
+    sourcefile,
+    sourceline,
+    extra_desc,
+    context
+FROM
+    pg_settings

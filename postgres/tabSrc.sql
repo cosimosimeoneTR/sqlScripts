@@ -1,4 +1,11 @@
 \prompt 'Table name to search? ' tabName
-select * from information_schema.tables where lower(table_name) LIKE lower('%'||:'tabName'||'%')
-and table_schema not in ('pg_catalog', 'information_schema')
-;
+SELECT
+    *
+FROM
+    information_schema.tables
+WHERE
+    LOWER( table_name ) LIKE LOWER( '%' ||:'tabName' || '%' )
+    AND table_schema NOT IN(
+        'pg_catalog',
+        'information_schema'
+    );

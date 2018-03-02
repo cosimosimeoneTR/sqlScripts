@@ -1,2 +1,9 @@
-\prompt 'Object name to search? ' objName
-select relowner, relname, relkind from pg_class where lower(relname) LIKE lower('%'||:'objName'||'%');
+\prompt 'Object name to search? ' objName 
+SELECT
+    relowner,
+    relname,
+    relkind
+FROM
+    pg_class
+WHERE
+    LOWER( relname ) LIKE LOWER( '%' ||:'objName' || '%' );
