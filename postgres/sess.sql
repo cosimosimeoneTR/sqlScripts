@@ -10,7 +10,7 @@ SELECT
     /*to_char(backend_start,'HH24:MI:SS')*/
     backend_start,
     /*xact_start,*/
-    age(xact_start,backend_start) AS connected_since,
+    age(now(), xact_start) AS running_since,
     state,
     query
 FROM
