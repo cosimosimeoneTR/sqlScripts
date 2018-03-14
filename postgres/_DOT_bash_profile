@@ -12,3 +12,6 @@ export LESS="-iMSx4 -FX"
 # Quick history add
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export HISTCONTROL=ignoredups
+
+# PG APP NAME
+export PGAPPNAME=wiwwo
